@@ -1,0 +1,650 @@
+:root{
+    --Red: hsl(4, 100%, 67%);
+    --Blue800: hsl(234, 29%, 20%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+body{
+    background-color: var(--Blue-700);
+    font-family: 'Roboto';
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.successBox{
+    display: none;
+}
+
+main #mainBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--White);
+    width:56.5rem;
+    height:40.0625rem;
+    border-radius: 2rem;
+}
+
+main .mainBox picture{
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: none;
+    width: 25rem;
+    height:37.0625rem;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+main .mainBox picture img {
+    border-radius: none;
+}
+
+.textBox{
+    margin: 0;
+    margin-top: 4.46875rem;
+    margin-bottom: 4.46875rem;
+    grid-column: 1;
+    grid-template-rows: 1;
+    padding-left: 3rem;
+    width:22.5rem;
+    height:28.125rem;
+}
+
+.textBox h1{
+    margin:0;
+    margin-top: 1rem;
+    color: var(--Blue800);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.textBox .join{
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Blue800);
+}
+
+.textBox ul{
+    list-style:  none;
+     /* remove left padding, it's usually unwanted: */
+     padding:  0;
+     margin-top: 2rem;
+}
+
+.textBox ul li::before{
+    content:  url(assets/images/icon-list.svg);
+    display:  inline-block;
+    vertical-align:  middle;
+
+     /* If you want some space between icon and text: */
+     margin-right:   1em;
+}
+
+.textBox ul li{
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+    color: var(--Blue800);
+    font-weight: 400;
+}
+
+.emailValidity{
+    display:inline;
+    height: 0.75rem;
+}
+
+.emailLabel{
+    margin: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--Blue800);
+}
+
+.validity{
+    margin: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--Red);
+    margin-left: 10rem;
+    visibility: hidden;
+}
+
+.emailBox{
+    width: 95%;
+    height: 3rem;
+    padding-left: 1rem;
+    border-color: var(--Grey);
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+}
+
+.emailBox:hover{
+    cursor: pointer;
+}
+
+.subscribeButton{
+    margin: 0;
+    padding: 0;
+    width:100.5%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border-color: var(--Blue800);
+    background-color: var(--Blue800);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.subscribeButton:hover{
+    margin: 0;
+    padding: 0;
+    width:100.5%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border:none;
+    background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.successBox{
+    width:31.5rem;
+    height:32.5rem;
+    background-color: var(--White);
+    border-radius: 2rem;
+}
+
+.successText{
+    width: 23.5rem;
+    height:23rem;
+    padding: 4rem;
+}
+
+.successTick{
+    width:4rem;
+    height: 4rem;
+}
+
+.boldText{
+    font-weight: 700;
+}
+
+.successText h1{
+    font-size: 3.5rem;
+    color:var(--Blue800);
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.successText p{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color:var(--Blue-700);
+}
+
+.dismissButton{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border-color: var(--Blue800);
+    background-color: var(--Blue800);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.dismissButton:hover{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border:none;
+    background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 48rem){
+
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background-color: var(--Blue-700);
+        font-family: 'Roboto';
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .successBox{
+        display: none;
+    }
+
+    main #mainBox{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: var(--White);
+        width:38rem;
+        height:54.875rem;
+        border-radius: 2rem;
+        margin: 0;
+        padding:0;
+        
+    }
+
+    main .mainBox picture{
+        padding:0;
+        margin:0;
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: none;
+        width:33rem;
+        height:22.393125rem;
+        margin-left: 0;
+        padding: 2.5rem;
+    }
+    
+    main .mainBox picture img {
+        border-radius: none;
+        width:33rem;
+        height:22.393125rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .textBox{
+        grid-column: 1;
+        grid-row: 2;
+        margin:0;
+        padding:0;
+        padding-left:2.5rem;
+        height: 3.5rem;
+    }
+
+    .textBox h1{
+        margin:0;
+        color: var(--Blue800);
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .textBox .join{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--Blue800);
+    }
+
+    .emailLabel{
+        margin: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--Blue800);
+        width: 33.125rem;
+    }
+
+    .validity{
+        margin: 0;
+        margin-top: 2.5rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--Red);
+        margin-left: 20rem;
+        visibility: hidden;
+
+    }
+    
+    .emailBox{
+        width:32rem;
+        height: 3rem;
+        padding-left: 1rem;
+        border-color: var(--Grey);
+        border-width: 0.1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .emailBox:hover{
+        cursor: pointer;
+    }
+
+    .subscribeButton{
+        margin: 0;
+        padding: 0;
+        width:33.1rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        border-color: var(--Blue800);
+        background-color: var(--Blue800);
+        color: var(--White);
+        font-weight: 700;
+    }
+    
+    .subscribeButton:hover{
+        margin: 0;
+        padding: 0;
+        width:33.1rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        border:none;
+        background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+        color: var(--White);
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .successBox{
+        width:31.5rem;
+        height:32.5rem;
+        background-color: var(--White);
+        border-radius: 2rem;
+    }
+    
+    .successText{
+        width: 23.5rem;
+        height:23rem;
+        padding: 4rem;
+    }
+    
+    .successTick{
+        width:4rem;
+        height: 4rem;
+    }
+    
+    .successText h1{
+        margin-top: 2rem;
+        font-size: 3.5rem;
+        color:var(--Blue800);
+        font-weight: 700;
+        line-height: 100%;
+    }
+    
+    .successText p{
+        margin-top: 2rem;
+        font-size: 1rem;
+        color:var(--Blue-700);
+    }
+
+    .dismissButton{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 2.5rem;
+        border-color: var(--Blue800);
+        background-color: var(--Blue800);
+        color: var(--White);
+        font-weight: 700;
+    }
+    
+    .dismissButton:hover{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 2.5rem;
+        border:none;
+        background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+        color: var(--White);
+        font-weight: 700;
+        cursor: pointer;
+    }
+    
+
+}
+
+@media only screen and (max-width: 23.4375rem){
+
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background-color: var(--Blue-700);
+        font-family: 'Roboto';
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .successBox{
+        display: none;
+    }
+
+    main #mainBox{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 17.75rem ;
+        background-color: var(--White);
+        width:23.4375rem;
+        height:54.875rem;
+        border-radius: 0;;
+        margin: 0;
+        padding:0;
+        
+    }
+
+    main .mainBox picture{
+        padding:0;
+        margin:0;
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: none;
+        width:23.4375rem;
+        height:17.75rem;
+        margin-left: 0;
+    }
+    
+    main .mainBox picture img {
+        border-radius: none;
+        width:23.4375rem;
+        height:auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .textBox{
+        grid-column: 1;
+        grid-row: 2;
+        margin:0;
+        padding:0;
+        width: 20.4375rem;
+        height: 29.625rem;
+        padding:1.5rem;
+    }
+
+    .textBox h1{
+        margin:0;
+        color: var(--Blue800);
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .textBox .join{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--Blue800);
+    }
+
+    .textBox ul{
+         /* remove left padding, it's usually unwanted: */
+        padding:  1.25rem;
+        margin-top: 2rem;
+        list-style: none;
+        text-indent: -1.25rem; /* key property */
+        margin-left: 1.25rem; /* key property */
+    }
+    
+    .textBox ul li::before{
+        content:  url('assets/images/icon-list.svg');
+    
+         /* If you want some space between icon and text: */
+         margin-right:   1em;
+    }
+    
+    .textBox ul li{
+        margin-bottom: 0.35rem;
+        font-size: 1rem;
+        color: var(--Blue800);
+        font-weight: 400;
+    }
+
+    .emailLabel{
+        margin: 0;
+        margin-top: 2.5rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--Blue800);
+    }
+
+    .validity{
+        margin: 0;
+        margin-top: 2.5rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--Red);
+        margin-left: 8rem;
+        visibility: hidden;
+
+    }
+    
+    .emailBox{
+        width: 95%;
+        height: 3rem;
+        padding-left: 1rem;
+        border-color: var(--Grey);
+        border-width: 0.1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .emailBox:hover{
+        cursor: pointer;
+    }
+    
+    .subscribeButton{
+        margin: 0;
+        padding: 0;
+        width:100.5%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        border-color: var(--Blue800);
+        background-color: var(--Blue800);
+        color: var(--White);
+        font-weight: 700;
+    }
+    
+    .subscribeButton:hover{
+        margin: 0;
+        padding: 0;
+        width:100.5%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        border:none;
+        background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+        color: var(--White);
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .successBox{
+        width:23.4375rem;
+        height:54.875rem;
+        background-color: var(--White);
+        border-radius: 0rem;
+    }
+    
+    .successText{
+        width: 20.4375rem;
+        height:23rem;
+        padding: 2rem;
+    }
+    
+    .successTick{
+        width:4rem;
+        height: 4rem;
+        margin-top: 6rem;
+    }
+    
+    .successText h1{
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        color:var(--Blue800);
+        font-weight: 700;
+        line-height: 100%;
+    }
+    
+    .successText p{
+        margin-top: 2rem;
+        font-size: 1rem;
+        color:var(--Blue-700);
+    }
+
+    .dismissButton{
+        margin: 0;
+        padding: 0;
+        margin-right: 3rem;
+        height: 3rem;
+        width: 20.4375rem;
+        border-radius: 0.5rem;
+        margin-top: 22.5rem;
+        border-color: var(--Blue800);
+        background-color: var(--Blue800);
+        color: var(--White);
+        font-weight: 700;
+        translate: -0.5rem;
+    }
+    
+    .dismissButton:hover{
+        margin: 0;
+        padding: 0;
+        width:20.4375rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 22.5rem;
+        border:none;
+        background: linear-gradient(90deg,hsl(14.6,100%,61.4%) 0%, hsl(345.8,100%,66.1%) 100%);
+        color: var(--White);
+        font-weight: 700;
+        cursor: pointer;
+    }
+    
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="script.js" async></script>
+    <title>Newsletter Sign-up Form with Success Message</title>
+  </head>
+  <body>
+
+    <!-- Sign-up form start -->
+    <main>
+      <div class="showBox" id="showBox">
+        <div class="mainBox" id="mainBox">
+          <picture>
+            <!---->
+            <source media="(max-width:23.4375rem)" class="mobileImage" srcset="assets/images/illustration-sign-up-mobile.svg">
+            <source media="(max-width:48rem)" class="tabletImage" srcset="assets/images/illustration-sign-up-tablet.svg">
+            <img class="desktopImage" src="assets/images/illustration-sign-up-desktop.svg" alt="Sign Up Image">
+          </picture>
+          <section class="textBox" id="textBox">
+            <h1>Stay updated!</h1>
+            <p class="join">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>    
+            </ul>
+            <p class="emailLabel">Email address<span class="validity" id="validity">Valid email required</span></p>
+            <input type="email" placeholder="email@company.com" class="emailBox" id="emailBox" name="email" autocomplete="off" onclick="errorFunction()">
+            <button type="button" class="subscribeButton" id="subscribeButton" onclick="successFunction()">Subscribe to monthly newsletter</button>
+          </section>
+              <!-- Sign-up form end -->
+        </div>
+      </div>
+          <!-- Success message start -->
+      <section class="successBox" id="successBox">
+        <div class="successText">
+          <img class="successTick" src="assets/images/icon-success.svg" alt="Success Icon">
+          <h1>Thanks for subscribing!</h1>
+          <div class="confirmation">
+          <p id="emailConfirm">A confirmation email has been sent to </p>
+          </div>
+          <button type="button" class="dismissButton" id="dismissButton" onclick="dismissFunction()">Dismiss message</button>
+        </div>
+      </section>
+      <!-- Success message end -->
+    </main>
+  </body>
+</html>
